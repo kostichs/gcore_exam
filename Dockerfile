@@ -5,10 +5,10 @@ LABEL authors="sergey.kostichev"
 WORKDIR /test_app
 
 COPY requirements.txt ./
-COPY tests/ ./
+COPY ./pages/ ./pages
+COPY ./tests/ ./tests
 COPY readme.md ./
-COPY pages/ ./
-COPY allure-results ./
+COPY ./allure-results ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 

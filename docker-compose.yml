@@ -23,8 +23,8 @@ services:
   qaa_exam:
     build: .
     volumes:
-      - ./tests:/test_app/tests
       - ./pages:/test_app/pages
+      - ./tests:/test_app/tests
       - ./allure-results:/test_app/allure-results
     depends_on:
       - chrome

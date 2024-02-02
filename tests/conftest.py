@@ -1,9 +1,11 @@
 import pytest
 from selenium import webdriver
+from time import sleep
 
 
 @pytest.fixture(scope="session")
 def browser():
+    sleep(5)
     options = webdriver.ChromeOptions()  # Chrome_options()
     options.add_argument('--ignore-ssl-errors=yes')
     options.add_argument('--ignore-certificate-errors')

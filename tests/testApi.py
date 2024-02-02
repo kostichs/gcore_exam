@@ -26,8 +26,7 @@ Test Cases:
 
 import allure
 import pytest
-from selenium.webdriver.support.wait import WebDriverWait
-
+import os
 from pages.main_page import MainPage
 from time import sleep
 
@@ -44,7 +43,7 @@ class TestPage:
     cookies_accepted = False
     main_page: MainPage
     current_currency: str
-
+    print("Dir: ", os.getcwd())
     @allure.title("Page loading")
     @allure.description("This function loads the pages the first time, accepts all cookies and saves default values")
     def test_prepare_environment(self, browser):
