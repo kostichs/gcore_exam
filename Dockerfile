@@ -12,4 +12,5 @@ COPY allure-results ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD pytest -v tests\testApi.py --alluredir=allure-results
+ENTRYPOINT ["pytest"]
+CMD ["-v", "tests/testApi.py", "--alluredir=allure-results"]

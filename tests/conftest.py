@@ -10,7 +10,7 @@ def browser():
     options.set_capability("browserName", "chrome")
     options.set_capability("browserVersion", "120.0")
     # driver = webdriver.Chrome(options)
-    driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub",
+    driver = webdriver.Remote(command_executor="http://chrome:4444/wd/hub",
                               options=options,
                               )
 
